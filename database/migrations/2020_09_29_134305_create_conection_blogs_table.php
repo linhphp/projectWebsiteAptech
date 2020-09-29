@@ -18,9 +18,9 @@ class CreateConectionBlogsTable extends Migration
             $table->unsignedBigInteger('news_id');
             $table->unsignedBigInteger('news_categories_id');
             $table->unsignedBigInteger('kind_of_id');
-            $table->foregin('news_id')->references('id')->on('news');
-            $table->foregin('news_categories_id')->references('id')->on('news_categories');
-            $table->foregin('kind_of_id')->references('id')->on('kind_of_news');
+            $table->foreign('news_id')->references('id')->on('news');
+            $table->foreign('news_categories_id')->references('id')->on('news_categories');
+            $table->foreign('kind_of_id')->references('id')->on('kind_of_news');
             $table->timestamps();
         });
     }

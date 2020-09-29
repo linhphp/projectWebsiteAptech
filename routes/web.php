@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+//------------------start admin --------------------
+Route::get('admin','AdminController@getSignIn')->name('signIn.get');
+Route::post('admin','AdminController@postSignIn')->name('signIn.post');
+//dang ky
+Route::get('admin-sign-up','AdminController@getSignUp')->name('signUp.get');
+Route::post('admin-sign-up','AdminController@postSignUp')->name('signUp.post');
+
